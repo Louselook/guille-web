@@ -1,0 +1,61 @@
+Quiero que construyas una landing page en React (SPA estática) para mi marca RoomIQ Acoustics.
+No me muestres el código todavía, primero asegúrate de cumplir todo lo siguiente y luego genera el proyecto completo.
+Objetivo del sitio
+Vender tratamiento acústico profesional mostrando beneficios medibles y un comparador Antes/Después. El sitio debe estar en español y listo para publicar como sitio estático.
+Marca y copy (usar tal cual / adaptado a titulares)
+Nombre: RoomIQ Acoustics
+Lema principal (hero): Ingeniería acústica para espacios reales
+Subclaim: Modelamos, medimos y mejoramos el sonido de tus espacios para lograr claridad, control e inteligibilidad.
+Badges técnicos: RT/EDT, C50/C80, D50, G, LF/LFC, STI.
+Servicios (mostrar como lista + breve descripción):
+Diseño y tratamiento acústico: paneles absorbentes/difractores, bass traps, nubes y cabinas.
+Modelación predictiva: CATT-Acoustic/TUCT — RT/EDT, C50/C80, D50, G, LF/LFC, STI.
+Mediciones in situ: ISO 3382/60268 — IR, RT, STI, ruido de fondo y verificación básica de aislamiento.
+Aplicaciones: estudios de grabación, salas de conferencias, aulas, auditorios, iglesias y oficinas abiertas.
+Entrega ejecutiva: renders, mapas de parámetros, memorias de cálculo y recomendaciones costo/beneficio.
+Secciones obligatorias
+Header sticky con logo RoomIQ (usar imagen adjunta) y navegación a: Servicios, Antes/Después, Soluciones, Proceso, Contacto.
+Hero con título fuerte (“Claridad, control e inteligibilidad medibles”), subtítulo y dos botones:
+Ver mejora de una sala (scroll a Antes/Después)
+Solicitar diagnóstico (scroll a Contacto)
+Servicios (usar los 5 de arriba).
+Comparador Antes/Después
+Slider arrastrable (explicar: “RT60 ↓ • C50/C80 ↑ • STI ↑”).
+Mini glosario en lenguaje simple de RT/EDT, C50/C80 y STI.
+Usar placeholders que yo reemplazaré luego: antes-1.jpg / despues-1.jpg y antes-2.jpg / despues-2.jpg.
+Soluciones / Productos (3 tarjetas con copy comercial y botón “Cotizar”):
+Panel absorbente broadband (45–100 mm, telas acústicas, montaje).
+Bass trap de esquina (control de modos a bajas frecuencias).
+Difusor QRD/PRD (mejora espacial y detalle).
+Cómo trabajamos (4 pasos): Diagnóstico → Modelación → Implementación → Verificación (conradilla cada uno).
+CTA oscuro: “¿Listo para oír la diferencia?” con dos botones:
+WhatsApp (enlace más abajo)
+Solicitar diagnóstico (scroll a Contacto)
+Contacto
+Texto: “Incluye diagnóstico, comparador antes/después y opciones de inversión.”
+Botón mailto a bitcow@gmail.com con asunto “Cotización RoomIQ”.
+Botón WhatsApp con enlace https://wa.me/WA_NUMBER (reemplaza WA_NUMBER por mi número real).
+También muestra mi correo bitcow@gmail.com escrito en claro.
+Requisitos técnicos
+React + Vite (o Create React App) y sitio estático (SPA).
+Estilos: Tailwind o CSS Modules (limpio, moderno, responsive).
+Sin backend: todo el contacto es por mailto y WhatsApp.
+Componente comparador con clip/overlay y “knob” central arrastrable.
+Imágenes: usar nombres de archivo listos para que yo los suba:
+logo-roomiq.png (logo del hero/header)
+hero-room.jpg (imagen del hero)
+antes-1.jpg, despues-1.jpg, antes-2.jpg, despues-2.jpg
+panel-absorvente.jpg, bass-trap.jpg, difusor.jpg
+SEO: <title> y meta-description con “tratamiento acústico”, “modelación CATT”, “mediciones ISO 3382”, “Medellín/Colombia”.
+Accesibilidad: alt-text en imágenes, contraste correcto, navegación con teclado.
+Performance: imágenes optimizables y lazy loading donde aplique.
+Footer con: “© {año} RoomIQ Acoustics. Ingeniería acústica para espacios reales.” + enlaces a secciones.
+Microcopy de botones y enlaces (usar tal cual)
+“Ver mejora de una sala”
+“Solicitar diagnóstico”
+“Cotizar”
+“Escríbenos por WhatsApp”
+“Enviar correo”
+Datos de contacto (usar exactamente)
+Correo: bitcow@gmail.com (mailto con asunto “Cotización RoomIQ”).
+WhatsApp: usar https://wa.me/WA_NUMBER (déjalo parametrizable para que yo cambie WA_NUMBER por mi número real).
