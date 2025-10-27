@@ -42,13 +42,15 @@ export default function CTASection() {
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button
-            onClick={() => window.open(whatsappLink, '_blank')}
+            asChild
             size="lg"
             className="px-8 py-6 text-base rounded-full bg-emerald-500 hover:bg-emerald-600 text-white shadow-lg hover:shadow-xl transition-all hover:scale-105 border-0"
             data-testid="button-whatsapp-cta"
           >
-            <MessageCircle className="mr-2" size={20} />
-            Escríbenos por WhatsApp
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+              <MessageCircle className="mr-2" size={20} />
+              Escríbenos por WhatsApp
+            </a>
           </Button>
 
           <Button

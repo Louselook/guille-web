@@ -109,24 +109,28 @@ export default function Contact() {
 
               {/* Email Button */}
               <Button
-                onClick={() => window.location.href = mailtoLink}
+                asChild
                 size="lg"
                 className="w-full rounded-lg bg-white text-slate-900 hover:bg-slate-100 shadow-lg"
                 data-testid="button-enviar-correo"
               >
-                <Mail className="mr-2" size={20} />
-                Enviar correo
+                <a href={mailtoLink}>
+                  <Mail className="mr-2" size={20} />
+                  Enviar correo
+                </a>
               </Button>
 
               {/* WhatsApp Button */}
               <Button
-                onClick={() => window.open(whatsappLink, '_blank')}
+                asChild
                 size="lg"
                 className="w-full rounded-lg bg-emerald-500 hover:bg-emerald-600 text-white shadow-lg border-0"
                 data-testid="button-whatsapp-contact"
               >
-                <MessageCircle className="mr-2" size={20} />
-                Escríbenos por WhatsApp
+                <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+                  <MessageCircle className="mr-2" size={20} />
+                  Escríbenos por WhatsApp
+                </a>
               </Button>
 
               {/* Divider */}
