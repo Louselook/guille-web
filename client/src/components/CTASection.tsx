@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Send } from "lucide-react";
+import { getWhatsAppLink } from "@/config/contact";
 
 export default function CTASection() {
   const scrollToContact = () => {
@@ -12,8 +13,7 @@ export default function CTASection() {
     }
   };
 
-  // Replace WA_NUMBER with actual number
-  const whatsappLink = "https://wa.me/WA_NUMBER";
+  const whatsappLink = getWhatsAppLink();
 
   return (
     <section className="py-20 md:py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">

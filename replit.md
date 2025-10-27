@@ -60,12 +60,19 @@ Colocar en `/client/public/images/`:
 - Productos: `panel-absorbente.jpg`, `bass-trap.jpg`, `difusor.jpg`
 
 ### Contacto
-- **Email**: bitcow@gmail.com (configurado con asunto "Cotización RoomIQ")
-- **WhatsApp**: Reemplazar `WA_NUMBER` en:
-  - `client/src/components/CTASection.tsx`
-  - `client/src/components/Contact.tsx`
-  
-Formato: `https://wa.me/573001234567` (sin espacios, con código de país)
+Toda la configuración está en: `client/src/config/contact.ts`
+
+```typescript
+export const CONTACT_CONFIG = {
+  email: "bitcow@gmail.com",
+  whatsappNumber: "573001234567", // 👈 Cambiar aquí
+  businessHours: "Lunes a Viernes, 8:00 - 18:00",
+  location: "Medellín, Colombia"
+};
+```
+
+Formato WhatsApp: código país + número (sin +, sin espacios)
+Ejemplo: 573001234567
 
 ## Funcionalidades Especiales
 
@@ -115,12 +122,14 @@ npm run build
 ✅ Comparador interactivo funcional
 ✅ SEO y meta-tags optimizados
 ✅ Diseño responsive
+✅ Configuración de contacto centralizada
+✅ WhatsApp configurado con número de ejemplo (Colombia: 573001234567)
 ⏳ Pendiente: Usuario debe agregar imágenes reales
-⏳ Pendiente: Usuario debe configurar número de WhatsApp
+⏳ Pendiente: Usuario debe actualizar número de WhatsApp en `config/contact.ts`
 
 ## Próximos Pasos (Usuario)
-1. Subir imágenes a `/client/public/images/`
-2. Reemplazar `WA_NUMBER` con número real de WhatsApp
+1. **Configurar contacto**: Editar `client/src/config/contact.ts` con tu número real de WhatsApp
+2. **Subir imágenes**: Colocar imágenes en `/client/public/images/` según README
 3. (Opcional) Ajustar colores en `index.css` si es necesario
 4. Probar en distintos dispositivos
 5. Publicar sitio estático

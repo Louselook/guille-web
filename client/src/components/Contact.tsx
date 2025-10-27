@@ -1,13 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Mail, MessageCircle, Phone } from "lucide-react";
+import { CONTACT_CONFIG, getWhatsAppLink, getMailtoLink } from "@/config/contact";
 
 export default function Contact() {
-  const email = "bitcow@gmail.com";
-  const subject = "Cotización RoomIQ";
-  const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}`;
-  
-  // Replace WA_NUMBER with actual number
-  const whatsappLink = "https://wa.me/WA_NUMBER";
+  const mailtoLink = getMailtoLink();
+  const whatsappLink = getWhatsAppLink();
 
   return (
     <section id="contacto" className="py-24 md:py-32 bg-background">
@@ -44,7 +41,7 @@ export default function Contact() {
                     className="text-base font-mono text-foreground hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded"
                     data-testid="link-email"
                   >
-                    {email}
+                    {CONTACT_CONFIG.email}
                   </a>
                 </div>
               </div>
@@ -68,7 +65,7 @@ export default function Contact() {
               <div className="pt-6 border-t border-border">
                 <div className="bg-primary/5 rounded-lg p-4">
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    <strong className="text-foreground">Nota:</strong> Reemplaza WA_NUMBER en el código con tu número de WhatsApp real en formato internacional (ej: 573001234567)
+                    <strong className="text-foreground">Configuración:</strong> Para cambiar el número de WhatsApp, edita el archivo <code className="text-xs bg-slate-100 px-1 py-0.5 rounded">client/src/config/contact.ts</code>
                   </p>
                 </div>
               </div>
@@ -135,7 +132,7 @@ export default function Contact() {
               {/* Divider */}
               <div className="pt-4 border-t border-white/20">
                 <p className="text-sm text-slate-400 text-center">
-                  Horario de atención: Lunes a Viernes, 8:00 - 18:00
+                  Horario de atención: {CONTACT_CONFIG.businessHours}
                 </p>
               </div>
             </div>

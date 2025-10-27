@@ -44,24 +44,25 @@ Coloca las siguientes imágenes en `/client/public/images/`:
 
 ## ⚙️ Configuración
 
-### WhatsApp
-Reemplaza `WA_NUMBER` en los siguientes archivos con tu número de WhatsApp en formato internacional (ej: 573001234567):
+### Contacto (WhatsApp y Email)
+Toda la configuración de contacto está centralizada en un solo archivo:
 
-- `client/src/components/CTASection.tsx` (línea 12)
-- `client/src/components/Contact.tsx` (línea 9)
+**`client/src/config/contact.ts`**
 
 ```typescript
-// Antes:
-const whatsappLink = "https://wa.me/WA_NUMBER";
-
-// Después:
-const whatsappLink = "https://wa.me/573001234567";
+export const CONTACT_CONFIG = {
+  email: "bitcow@gmail.com",           // 👈 Cambiar si es necesario
+  emailSubject: "Cotización RoomIQ",
+  whatsappNumber: "573001234567",      // 👈 CAMBIAR CON TU NÚMERO REAL
+  businessHours: "Lunes a Viernes, 8:00 - 18:00",
+  location: "Medellín, Colombia"
+};
 ```
 
-### Correo Electrónico
-El correo `bitcow@gmail.com` ya está configurado con el asunto "Cotización RoomIQ". Si deseas cambiarlo, edita:
-
-- `client/src/components/Contact.tsx` (líneas 6-7)
+**Formato del número de WhatsApp:**
+- Sin espacios, sin signos +
+- Código de país + número completo
+- Ejemplo Colombia: `573001234567` (57 = país, 300 = operador, 1234567 = número)
 
 ## 🚀 Desarrollo
 
