@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --button-outline: rgba(0,0,0, .10);
+  --badge-outline: rgba(0,0,0, .05);
+  --opaque-button-border-intensity: -10;
+  --elevate-1: rgba(0,0,0, .03);
+  --elevate-2: rgba(0,0,0, .07);
+
+  --background: 0 0% 100%;
+  --foreground: 210 24% 16%;
+  --border: 210 16% 88%;
+  --card: 210 20% 98%;
+  --card-foreground: 210 24% 16%;
+  --card-border: 210 18% 93%;
+  --sidebar: 210 18% 96%;
+  --sidebar-foreground: 210 24% 16%;
+  --sidebar-border: 210 16% 91%;
+  --sidebar-primary: 203 88% 53%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 210 28% 92%;
+  --sidebar-accent-foreground: 203 88% 53%;
+  --sidebar-ring: 203 89% 53%;
+  --popover: 210 22% 96%;
+  --popover-foreground: 210 24% 16%;
+  --popover-border: 210 18% 91%;
+  --primary: 203 88% 53%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 210 20% 88%;
+  --secondary-foreground: 210 24% 16%;
+  --muted: 210 16% 92%;
+  --muted-foreground: 210 24% 16%;
+  --accent: 210 30% 94%;
+  --accent-foreground: 203 88% 53%;
+  --destructive: 356 91% 54%;
+  --destructive-foreground: 0 0% 100%;
+  --input: 210 20% 85%;
+  --ring: 203 89% 53%;
+  --chart-1: 203 88% 45%;
+  --chart-2: 160 100% 32%;
+  --chart-3: 42 93% 52%;
+  --chart-4: 147 79% 38%;
+  --chart-5: 341 75% 48%;
+
+  --font-sans: Inter, IBM Plex Sans, system-ui, -apple-system, sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: Menlo, Monaco, monospace;
+  --font-display: Space Grotesk, Inter, system-ui, sans-serif;
+  --radius: 0.75rem;
+  --shadow-2xs: 0px 1px 2px 0px hsl(210 24% 16% / 0.05);
+  --shadow-xs: 0px 1px 3px 0px hsl(210 24% 16% / 0.08);
+  --shadow-sm: 0px 2px 4px -1px hsl(210 24% 16% / 0.06), 0px 1px 2px -1px hsl(210 24% 16% / 0.06);
+  --shadow: 0px 4px 6px -1px hsl(210 24% 16% / 0.08), 0px 2px 4px -1px hsl(210 24% 16% / 0.06);
+  --shadow-md: 0px 6px 12px -2px hsl(210 24% 16% / 0.10), 0px 3px 7px -3px hsl(210 24% 16% / 0.08);
+  --shadow-lg: 0px 10px 20px -5px hsl(210 24% 16% / 0.12), 0px 6px 10px -5px hsl(210 24% 16% / 0.08);
+  --shadow-xl: 0px 20px 30px -10px hsl(210 24% 16% / 0.15), 0px 10px 15px -8px hsl(210 24% 16% / 0.10);
+  --shadow-2xl: 0px 25px 50px -12px hsl(210 24% 16% / 0.20);
+  --tracking-normal: 0em;
+  --tracking-tight: -0.01em;
+  --tracking-wide: 0.01em;
+  --spacing: 0.25rem;
+
+  --primary-border: hsl(from var(--primary) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --secondary-border: hsl(from var(--secondary) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --muted-border: hsl(from var(--muted) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --accent-border: hsl(from var(--accent) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --destructive-border: hsl(from var(--destructive) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --sidebar-primary-border: hsl(from var(--sidebar-primary) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --sidebar-accent-border: hsl(from var(--sidebar-accent) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+}
+
+.dark {
+  --button-outline: rgba(255,255,255, .10);
+  --badge-outline: rgba(255,255,255, .05);
+  --opaque-button-border-intensity: 8;
+  --elevate-1: rgba(255,255,255, .04);
+  --elevate-2: rgba(255,255,255, .09);
+
+  --background: 210 18% 8%;
+  --foreground: 210 16% 92%;
+  --border: 210 14% 18%;
+  --card: 210 16% 11%;
+  --card-foreground: 210 16% 92%;
+  --card-border: 210 14% 15%;
+  --sidebar: 210 18% 9%;
+  --sidebar-foreground: 210 16% 92%;
+  --sidebar-border: 210 14% 13%;
+  --sidebar-primary: 203 88% 53%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 210 45% 14%;
+  --sidebar-accent-foreground: 203 88% 53%;
+  --sidebar-ring: 203 89% 53%;
+  --popover: 210 16% 13%;
+  --popover-foreground: 210 16% 92%;
+  --popover-border: 210 14% 17%;
+  --primary: 203 88% 53%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 210 14% 18%;
+  --secondary-foreground: 210 16% 92%;
+  --muted: 210 14% 15%;
+  --muted-foreground: 210 16% 92%;
+  --accent: 210 40% 12%;
+  --accent-foreground: 203 88% 53%;
+  --destructive: 356 91% 54%;
+  --destructive-foreground: 0 0% 100%;
+  --input: 210 18% 22%;
+  --ring: 203 89% 53%;
+  --chart-1: 203 88% 58%;
+  --chart-2: 160 100% 42%;
+  --chart-3: 42 93% 62%;
+  --chart-4: 147 79% 48%;
+  --chart-5: 341 75% 58%;
+
+  --font-sans: Inter, IBM Plex Sans, system-ui, -apple-system, sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: Menlo, Monaco, monospace;
+  --font-display: Space Grotesk, Inter, system-ui, sans-serif;
+  --radius: 0.75rem;
+  --shadow-2xs: 0px 1px 2px 0px hsl(0 0% 0% / 0.30);
+  --shadow-xs: 0px 1px 3px 0px hsl(0 0% 0% / 0.40);
+  --shadow-sm: 0px 2px 4px -1px hsl(0 0% 0% / 0.35), 0px 1px 2px -1px hsl(0 0% 0% / 0.30);
+  --shadow: 0px 4px 6px -1px hsl(0 0% 0% / 0.45), 0px 2px 4px -1px hsl(0 0% 0% / 0.35);
+  --shadow-md: 0px 6px 12px -2px hsl(0 0% 0% / 0.50), 0px 3px 7px -3px hsl(0 0% 0% / 0.40);
+  --shadow-lg: 0px 10px 20px -5px hsl(0 0% 0% / 0.55), 0px 6px 10px -5px hsl(0 0% 0% / 0.45);
+  --shadow-xl: 0px 20px 30px -10px hsl(0 0% 0% / 0.60), 0px 10px 15px -8px hsl(0 0% 0% / 0.50);
+  --shadow-2xl: 0px 25px 50px -12px hsl(0 0% 0% / 0.70);
+  --tracking-normal: 0em;
+  --tracking-tight: -0.01em;
+  --tracking-wide: 0.01em;
+  --spacing: 0.25rem;
+
+  --primary-border: hsl(from var(--primary) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --secondary-border: hsl(from var(--secondary) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --muted-border: hsl(from var(--muted) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --accent-border: hsl(from var(--accent) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --destructive-border: hsl(from var(--destructive) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --sidebar-primary-border: hsl(from var(--sidebar-primary) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --sidebar-accent-border: hsl(from var(--sidebar-accent) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
