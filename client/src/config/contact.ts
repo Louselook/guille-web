@@ -6,7 +6,7 @@ export const CONTACTS = [
     emailSubject: "Cotización RoomIQ - Gd Cantillo",
     whatsappNumber: "573024165377",
     businessHours: "Lunes a Viernes, 8:00 - 18:00",
-    location: "Medellín, Colombia"
+    location: "Cartagena & Medellín, Colombia"
   },
   {
     name: "Juan David Mena",
@@ -15,7 +15,7 @@ export const CONTACTS = [
     emailSubject: "Cotización RoomIQ - Jd Mena",
     whatsappNumber: "573106166435",
     businessHours: "Lunes a Viernes, 9:00 - 17:00",
-    location: "Medellín, Colombia"
+    location: "Cali & Medellín, Colombia"
   }
 ] as const;
 
