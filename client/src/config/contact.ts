@@ -10,12 +10,12 @@ export const CONTACTS = [
   },
   {
     name: "Juan David Mena",
-    role: "Consultor Técnico",
-    email: "carlos@roomiq.co",
-    emailSubject: "Cotización RoomIQ - Carlos",
-    whatsappNumber: "573045678912",
+    role: "Ingeniero Acústico",
+    email: "Djkoalander07@gmail.com",
+    emailSubject: "Cotización RoomIQ - Jd Mena",
+    whatsappNumber: "573106166435",
     businessHours: "Lunes a Viernes, 9:00 - 17:00",
-    location: "Bogotá, Colombia"
+    location: "Medellín, Colombia"
   }
 ] as const;
 
