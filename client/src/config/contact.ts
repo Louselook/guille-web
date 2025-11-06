@@ -1,38 +1,25 @@
-/**
- * Configuración de contacto para RoomIQ Acoustics
- * 
- * IMPORTANTE: Reemplaza WHATSAPP_NUMBER con tu número real de WhatsApp
- * en formato internacional (sin espacios, sin signos + al inicio)
- * 
- * Ejemplo: "573001234567" para Colombia
- * - 57: Código de país (Colombia)
- * - 300: Código de operador
- * - 1234567: Número
- */
+export const CONTACTS = [
+  {
+    name: "Guillermo David Cantillo",
+    role: "Ingeniero Acústico",
+    email: "bitcow@gmail.com",
+    emailSubject: "Cotización RoomIQ - Gd Cantillo",
+    whatsappNumber: "573024165377",
+    businessHours: "Lunes a Viernes, 8:00 - 18:00",
+    location: "Medellín, Colombia"
+  },
+  {
+    name: "Juan David Mena",
+    role: "Consultor Técnico",
+    email: "carlos@roomiq.co",
+    emailSubject: "Cotización RoomIQ - Carlos",
+    whatsappNumber: "573045678912",
+    businessHours: "Lunes a Viernes, 9:00 - 17:00",
+    location: "Bogotá, Colombia"
+  }
+] as const;
 
-export const CONTACT_CONFIG = {
-  // Email de contacto
-  email: "bitcow@gmail.com",
-  emailSubject: "Cotización RoomIQ",
-  
-  // WhatsApp - REEMPLAZA ESTO CON TU NÚMERO REAL
-  // Formato: código de país + número (sin espacios, sin +)
-  // Ejemplo para Colombia: "573001234567"
-  whatsappNumber: "573001234567", // 👈 CAMBIAR ESTE NÚMERO
-  
-  // Horario de atención
-  businessHours: "Lunes a Viernes, 8:00 - 18:00",
-  
-  // Ubicación
-  location: "Medellín, Colombia"
-} as const;
-
-// Genera el enlace de WhatsApp
-export const getWhatsAppLink = () => {
-  return `https://wa.me/${CONTACT_CONFIG.whatsappNumber}`;
-};
-
-// Genera el enlace de mailto
-export const getMailtoLink = () => {
-  return `mailto:${CONTACT_CONFIG.email}?subject=${encodeURIComponent(CONTACT_CONFIG.emailSubject)}`;
-};
+// Funciones auxiliares
+export const getWhatsAppLink = (number: string) => `https://wa.me/${number}`;
+export const getMailtoLink = (email: string, subject: string) =>
+  `mailto:${email}?subject=${encodeURIComponent(subject)}`;

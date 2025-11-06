@@ -53,7 +53,7 @@ Toda la configuración de contacto está centralizada en un solo archivo:
 export const CONTACT_CONFIG = {
   email: "bitcow@gmail.com",           // 👈 Cambiar si es necesario
   emailSubject: "Cotización RoomIQ",
-  whatsappNumber: "573001234567",      // 👈 CAMBIAR CON TU NÚMERO REAL
+  whatsappNumber: "573024165377",      // 👈 CAMBIAR CON TU NÚMERO REAL
   businessHours: "Lunes a Viernes, 8:00 - 18:00",
   location: "Medellín, Colombia"
 };
@@ -62,7 +62,7 @@ export const CONTACT_CONFIG = {
 **Formato del número de WhatsApp:**
 - Sin espacios, sin signos +
 - Código de país + número completo
-- Ejemplo Colombia: `573001234567` (57 = país, 300 = operador, 1234567 = número)
+- Ejemplo Colombia: `573024165377` (57 = país, 300 = operador, 1234567 = número)
 
 ## 🚀 Desarrollo
 

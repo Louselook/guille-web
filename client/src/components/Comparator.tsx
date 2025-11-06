@@ -93,17 +93,12 @@ export default function Comparator() {
             data-testid="comparator-container"
           >
             {/* After Image (Background) */}
-            <div className="absolute inset-0 bg-gradient-to-br from-emerald-100 to-emerald-200">
-              <div className="flex items-center justify-center h-full">
-                <div className="text-center p-8">
-                  <div className="w-20 h-20 mx-auto bg-emerald-500/20 rounded-full flex items-center justify-center mb-4">
-                    <TrendingUp className="w-10 h-10 text-emerald-600" />
-                  </div>
-                  <p className="text-sm text-emerald-700 font-medium">
-                    Coloca despues-1.jpg en<br />/client/public/images/
-                  </p>
-                </div>
-              </div>
+            <div
+              className="absolute inset-0 bg-cover bg-center"
+              style={{
+                backgroundImage: "url('/images/sala5A-1/despues-1.jpg')",
+              }}
+            >
               <div className="absolute top-4 right-4 px-4 py-2 bg-emerald-600 text-white font-bold text-sm rounded-lg shadow-lg uppercase tracking-wide">
                 DESPUÉS
               </div>
@@ -111,19 +106,12 @@ export default function Comparator() {
 
             {/* Before Image (Foreground with Clip) */}
             <div
-              className="absolute inset-0 bg-gradient-to-br from-red-100 to-red-200"
-              style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
+              className="absolute inset-0 bg-cover bg-center"
+              style={{
+                backgroundImage: "url('/images/sala5A-1/antes-1.jpg')",
+                clipPath: `inset(0 ${100 - sliderPosition}% 0 0)`,
+              }}
             >
-              <div className="flex items-center justify-center h-full">
-                <div className="text-center p-8">
-                  <div className="w-20 h-20 mx-auto bg-red-500/20 rounded-full flex items-center justify-center mb-4">
-                    <TrendingDown className="w-10 h-10 text-red-600" />
-                  </div>
-                  <p className="text-sm text-red-700 font-medium">
-                    Coloca antes-1.jpg en<br />/client/public/images/
-                  </p>
-                </div>
-              </div>
               <div className="absolute top-4 left-4 px-4 py-2 bg-red-600 text-white font-bold text-sm rounded-lg shadow-lg uppercase tracking-wide">
                 ANTES
               </div>

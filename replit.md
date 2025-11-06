@@ -65,14 +65,14 @@ Toda la configuración está en: `client/src/config/contact.ts`
 ```typescript
 export const CONTACT_CONFIG = {
   email: "bitcow@gmail.com",
-  whatsappNumber: "573001234567", // 👈 Cambiar aquí
+  whatsappNumber: "573024165377", // 👈 Cambiar aquí
   businessHours: "Lunes a Viernes, 8:00 - 18:00",
   location: "Medellín, Colombia"
 };
 ```
 
 Formato WhatsApp: código país + número (sin +, sin espacios)
-Ejemplo: 573001234567
+Ejemplo: 573024165377
 
 ## Funcionalidades Especiales
 
@@ -123,7 +123,7 @@ npm run build
 ✅ SEO y meta-tags optimizados
 ✅ Diseño responsive
 ✅ Configuración de contacto centralizada
-✅ WhatsApp configurado con número de ejemplo (Colombia: 573001234567)
+✅ WhatsApp configurado con número de ejemplo (Colombia: 573024165377)
 ⏳ Pendiente: Usuario debe agregar imágenes reales
 ⏳ Pendiente: Usuario debe actualizar número de WhatsApp en `config/contact.ts`
 

@@ -89,20 +89,17 @@ export default function Hero() {
           <div className="hidden lg:block">
             <div className="relative aspect-square max-w-md mx-auto">
               {/* Placeholder for hero image or graphic */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-primary/10 rounded-3xl backdrop-blur-xl border border-primary/20 shadow-2xl">
-                <div className="flex items-center justify-center h-full">
-                  <div className="text-center space-y-4 p-8">
-                    <div className="w-24 h-24 mx-auto bg-primary/20 rounded-full flex items-center justify-center">
-                      <svg className="w-12 h-12 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
-                      </svg>
-                    </div>
-                    <p className="text-sm text-slate-400 font-mono">
-                      Coloca hero-room.jpg en<br />/client/public/images/
-                    </p>
-                  </div>
-                </div>
+              {/* Hero Image */}
+              <div className="absolute inset-0 rounded-3xl overflow-hidden border border-primary/20 shadow-2xl">
+                <img
+                  src="/images/hero-room.jpg"
+                  alt="Sala tratada acústicamente"
+                  className="w-full h-full object-cover"
+                />
+                {/* Overlay para mantener el estilo */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-slate-900/10 to-transparent mix-blend-overlay"></div>
               </div>
+
               
               {/* Decorative Elements */}
               <div className="absolute -top-4 -right-4 w-32 h-32 bg-primary/20 rounded-full blur-3xl"></div>

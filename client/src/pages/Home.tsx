@@ -28,6 +28,7 @@ export default function Home() {
         <Hero />
         <Services />
         <Comparator />
+        {/* <Comparator /> */}
         <Solutions />
         <Process />
         <CTASection />

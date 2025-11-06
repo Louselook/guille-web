@@ -73,9 +73,8 @@ app.use((req, res, next) => {
   const port = parseInt(process.env.PORT || '5000', 10);
   server.listen({
     port,
-    host: "0.0.0.0",
-    reusePort: true,
+    host: "127.0.0.1", // o simplemente quita 'host' para usar localhost por defecto
   }, () => {
-    log(`serving on port ${port}`);
+    log(`✅ Server running at http://127.0.0.1:${port}`);
   });
 })();
