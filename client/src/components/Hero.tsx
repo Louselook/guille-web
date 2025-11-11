@@ -1,7 +1,8 @@
+import { forwardRef } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, TrendingUp } from "lucide-react";
 
-export default function Hero() {
+const Hero = forwardRef<HTMLElement>((props, ref) => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -9,23 +10,26 @@ export default function Hero() {
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
-      });
+      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
     }
   };
 
   const technicalBadges = ["RT/EDT", "C50/C80", "D50", "G", "LF/LFC", "STI"];
 
   return (
-    <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 text-white">
+    <section
+      ref={ref}
+      className="relative min-h-[85vh] flex items-center overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 text-white"
+    >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)`,
-          backgroundSize: '40px 40px'
-        }}></div>
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)`,
+            backgroundSize: "40px 40px",
+          }}
+        ></div>
       </div>
 
       {/* Content */}
@@ -47,7 +51,8 @@ export default function Hero() {
 
             {/* Subheadline */}
             <p className="text-lg sm:text-xl text-slate-300 leading-relaxed max-w-xl">
-              Modelamos, medimos y mejoramos el sonido de tus espacios para lograr claridad, control e inteligibilidad.
+              Modelamos, medimos y mejoramos el sonido de tus espacios para lograr
+              claridad, control e inteligibilidad.
             </p>
 
             {/* Technical Badges */}
@@ -68,7 +73,6 @@ export default function Hero() {
                 onClick={() => scrollToSection("comparador")}
                 size="lg"
                 className="text-base px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-105"
-                data-testid="button-ver-mejora"
               >
                 Ver mejora de una sala
                 <ArrowRight className="ml-2" size={20} />
@@ -78,7 +82,6 @@ export default function Hero() {
                 variant="outline"
                 size="lg"
                 className="text-base px-8 py-6 rounded-full border-2 border-white/20 bg-white/10 backdrop-blur-md hover:bg-white/20 text-white hover:text-white shadow-lg transition-all hover:scale-105"
-                data-testid="button-solicitar-diagnostico-hero"
               >
                 Solicitar diagnóstico
               </Button>
@@ -88,7 +91,6 @@ export default function Hero() {
           {/* Visual Element */}
           <div className="hidden lg:block">
             <div className="relative aspect-square max-w-md mx-auto">
-              {/* Placeholder for hero image or graphic */}
               {/* Hero Image */}
               <div className="absolute inset-0 rounded-3xl overflow-hidden border border-primary/20 shadow-2xl">
                 <img
@@ -96,11 +98,10 @@ export default function Hero() {
                   alt="Sala tratada acústicamente"
                   className="w-full h-full object-cover"
                 />
-                {/* Overlay para mantener el estilo */}
+                {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-slate-900/10 to-transparent mix-blend-overlay"></div>
               </div>
 
-              
               {/* Decorative Elements */}
               <div className="absolute -top-4 -right-4 w-32 h-32 bg-primary/20 rounded-full blur-3xl"></div>
               <div className="absolute -bottom-4 -left-4 w-40 h-40 bg-blue-500/20 rounded-full blur-3xl"></div>
@@ -110,4 +111,8 @@ export default function Hero() {
       </div>
     </section>
   );
-}
+});
+
+Hero.displayName = "Hero";
+
+export default Hero;

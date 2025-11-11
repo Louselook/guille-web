@@ -18,7 +18,7 @@ export default function Solutions() {
       title: "Panel absorbente broadband",
       description: "Paneles de 45-100 mm de espesor con materiales de alta densidad y telas acústicas premium. Absorción efectiva en el rango completo de frecuencias. Incluye sistema de montaje profesional.",
       features: ["45-100 mm espesor", "Telas acústicas premium", "Montaje incluido"],
-      image: "panel-absorbente.jpg",
+      image: "/images/products/absorbente broadband.png",
       color: "from-blue-500 to-blue-600"
     },
     {
@@ -26,7 +26,7 @@ export default function Solutions() {
       title: "Bass trap de esquina",
       description: "Control preciso de modos resonantes en bajas frecuencias. Diseñados específicamente para esquinas y uniones techo-pared donde se acumulan los problemas de graves. Mejora dramática en la respuesta de bajos.",
       features: ["Control de modos LF", "Diseño para esquinas", "Alta eficiencia"],
-      image: "bass-trap.jpg",
+      image: "/images/products/Bass trap.png",
       color: "from-emerald-500 to-emerald-600"
     },
     {
@@ -34,7 +34,7 @@ export default function Solutions() {
       title: "Difusor QRD/PRD",
       description: "Difusores de secuencia cuadrática (QRD) y residuos primos (PRD) para mejorar la espacialidad sin reducir energía. Perfectos para salas de mezcla, auditorios y espacios que requieren detalle acústico sin sobre-amortiguamiento.",
       features: ["Mejora espacial", "Preserva energía", "Detalle acústico"],
-      image: "difusor.jpg",
+      image: "/images/products/DIFUSORE QRD.png",
       color: "from-violet-500 to-violet-600"
     }
   ];
@@ -62,18 +62,17 @@ export default function Solutions() {
                 className="group bg-card border border-card-border rounded-xl overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
                 data-testid={`card-solution-${index}`}
               >
-                {/* Image Placeholder */}
-                <div className={`relative h-48 bg-gradient-to-br ${product.color} overflow-hidden`}>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center text-white p-6">
-                      <Icon className="w-16 h-16 mx-auto mb-3 opacity-80" />
-                      <p className="text-xs font-medium opacity-90">
-                        Coloca {product.image} en<br />/client/public/images/
-                      </p>
-                    </div>
+                {/* Product Image with Gradient Background */}
+                <div className={`relative h-48 bg-gradient-to-br ${product.color} flex items-center justify-center overflow-hidden`}>
+                  <img
+                    src={product.image}
+                    alt={product.title}
+                    className="max-w-full max-h-full object-contain"
+                  />
+                  {/* Optional Icon Overlay */}
+                  <div className="absolute top-4 right-4">
+                    <Icon className="w-8 h-8 text-white opacity-70" />
                   </div>
-                  {/* Decorative gradient overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                 </div>
 
                 {/* Content */}

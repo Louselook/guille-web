@@ -14,7 +14,7 @@ export default function Process() {
       icon: BarChart3,
       title: "Modelación",
       description: "Simulación acústica predictiva con CATT-Acoustic. Optimizamos el diseño antes de cualquier inversión.",
-      color: "bg-primary"
+      color: "bg-red-500"
     },
     {
       number: 3,
@@ -48,7 +48,7 @@ export default function Process() {
         {/* Process Steps - Desktop Timeline */}
         <div className="hidden lg:block relative">
           {/* Timeline Connector */}
-          <div className="absolute top-32 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-primary via-emerald-500 to-violet-500 opacity-20"></div>
+          <div className="absolute top-32 left-0 right-0 h-1 bg-gradient-to-r"></div>
 
           <div className="grid grid-cols-4 gap-8">
             {steps.map((step, index) => {

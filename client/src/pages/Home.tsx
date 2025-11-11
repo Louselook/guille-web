@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
@@ -10,25 +10,29 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 export default function Home() {
-  const [scrolled, setScrolled] = useState(false);
+  const heroRef = useRef<HTMLElement>(null);
+  const [scrolledPastHero, setScrolledPastHero] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      if (!heroRef.current) return;
+      const rect = heroRef.current.getBoundingClientRect();
+      // Cambia a true cuando el bottom del Hero pasa el top de la pantalla
+      setScrolledPastHero(rect.bottom <= 0);
     };
 
     window.addEventListener("scroll", handleScroll);
+    handleScroll(); // init
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <div className="min-h-screen bg-background">
-      <Header scrolled={scrolled} />
+      <Header scrolled={scrolledPastHero} />
       <main>
-        <Hero />
+        <Hero ref={heroRef} />
         <Services />
         <Comparator />
-        {/* <Comparator /> */}
         <Solutions />
         <Process />
         <CTASection />
